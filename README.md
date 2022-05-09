@@ -3,6 +3,8 @@
 Welcome to image classification using Jetson Nano.
 This repo will walk you through how i collected datasets,trained model and classified images.I have collected Cucumber,Mango images and trained my model.
 
+I have used resnNet-18 image recognition model.ResNet is a residual network, made with building blocks that incorporate "shortcut connections" that skip one or more layers.The ResNet architectures presented range from 18-layers deep, all the way to 152-layers deep. In our project we will be using ResNet-18.ResNet-18 is a convolutional neural network that is 18 layers deep. We can load a pretrained version of the network trained on more than a million images from the ImageNet database.
+
 
 ![0](https://user-images.githubusercontent.com/73685642/167367605-fc5eb4ad-251b-4ee4-b87a-37d7dc0ca433.jpg)
 ![1](https://user-images.githubusercontent.com/73685642/167367693-01b14a4e-9ad8-46e7-a64a-d990cfbd7737.jpg)
@@ -19,10 +21,13 @@ For disabling the desktop GUI.
 login in back and after training exit it by using the following command:
 
 >**$ sudo init 5**
+>
 ## Training the model
 > **$ python3 train.py --model-dir=models/mydatasets --batch-size=8 --workers=2 --epochs=30 data/mydatasets**
-## Exporting to onnx
+> 
+## Converting model to onnx
 > **$ python3 onnx_export.py --model-dir=models/mydatasets**
+> 
 ## Run on live camera
 
 * MIPI CSI cameras (csi://0)
@@ -30,6 +35,14 @@ login in back and after training exit it by using the following command:
 * RTP/RTSP streams (rtsp://username:password@ip:port)
 
 > **$ imagenet.py --model=models/mydatasets/resnet18.onnx --labels=data/mydatasets/mylabels.txt --input_blob=input_0 output_blob=output_0 /dev/video0**
+> 
+## Saving the live camera feed in .mp4 fromat
+> **$ imagenet.py --model=models/mydatasets/resnet18.onnx --labels=data/mydatasets/mylabels.txt --input_blob=input_0 output_blob=output_0 /dev/video0 test.mp4**
+
+## Video Walk through Terminal Sessions
+
+### Training the model for image classification
+[![asciicast](https://asciinema.org/a/MMeGSu4bne00HSnHDHfP1lkOi.svg)](https://asciinema.org/a/MMeGSu4bne00HSnHDHfP1lkOi)
 
 ## Output Video
 👉 https://youtu.be/AuB8RWOY17U)
