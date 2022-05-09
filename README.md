@@ -1,9 +1,9 @@
 # Image Classification In Jetson Nano
 
-Welcome to image classification using Jetson Nano.
+Welcome to **Image Classification** using **Jetson Nano**.
 This repo will walk you through how i collected datasets,trained model and classified images.I have collected Cucumber,Mango images and trained my model.
 
-I have used resnNet-18 image recognition model.ResNet is a residual network, made with building blocks that incorporate "shortcut connections" that skip one or more layers.The ResNet architectures presented range from 18-layers deep, all the way to 152-layers deep. In our project we will be using ResNet-18.ResNet-18 is a convolutional neural network that is 18 layers deep. We can load a pretrained version of the network trained on more than a million images from the ImageNet database.
+I have used **ResnNet-18** image recognition model. ResNet is a residual network, made with building blocks that incorporate "shortcut connections" that skip one or more layers.The ResNet architectures presented range from 18-layers deep, all the way to 152-layers deep. In our project we will be using ResNet-18. ResNet-18 is a convolutional neural network that is 18 layers deep. We can load a pretrained version of the network trained on more than a million images from the ImageNet database.
 
 
 ![0](https://user-images.githubusercontent.com/73685642/167367605-fc5eb4ad-251b-4ee4-b87a-37d7dc0ca433.jpg)
