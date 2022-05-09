@@ -30,3 +30,8 @@ login in back and after training exit it by using the following command:
 * RTP/RTSP streams (rtsp://username:password@ip:port)
 
 > **$ imagenet.py --model=models/mydatasets/resnet18.onnx --labels=data/mydatasets/mylabels.txt --input_blob=input_0 output_blob=output_0 /dev/video0**
+
+## Output Video
+👉 https://youtu.be/AuB8RWOY17U)
+
+[![Image Classification on Jetson Nano](http://img.youtube.com/vi/AuB8RWOY17U/0.jpg)](https://youtu.be/AuB8RWOY17U)
