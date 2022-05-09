@@ -2,17 +2,17 @@
 
 Welcome to image classification using Jetson Nano.
 This repo will walk you through how i collected datasets,trained model and classified images.I have collected Cucumber,Mango images and trained my model.
-The code is in the classification directory named train.py.
+
 
 ![0](https://user-images.githubusercontent.com/73685642/167367605-fc5eb4ad-251b-4ee4-b87a-37d7dc0ca433.jpg)
 ![1](https://user-images.githubusercontent.com/73685642/167367693-01b14a4e-9ad8-46e7-a64a-d990cfbd7737.jpg)
 
-
+The code is in the classification directory named train.py.I have downloaded required models,modules by referring [HELLO AI WORLD](https://github.com/dusty-nv/jetson-inference). And for datasets you can refer this [method](https://github.com/dusty-nv/jetson-inference/blob/master/docs/pytorch-collect.md).
 ## Locating  to the directory
 
->**$ cd/NvidiaProject/classification**
+>**$ cd NvidiaProject/classification**
 
-For disabling the desktop GUI 
+For disabling the desktop GUI.
 
 >**$ sudo init 3**
 
