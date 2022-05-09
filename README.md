@@ -10,18 +10,23 @@ The code is in the classification directory named train.py.
 
 ## Locating  to the directory
 
->**$cd/NvidiaProject/classification**
+>**$ cd/NvidiaProject/classification**
 
 For disabling the desktop GUI 
 
->**$sudo init 3**
+>**$ sudo init 3**
 
 login in back and after training exit it by using the following command:
 
->**$sudo init 5**
+>**$ sudo init 5**
 ## Training the model
-> **$python3 train.py --model-dir=models/mydatasets --batch-size=8 --workers=2 --epochs=30 data/mydatasets**
+> **$ python3 train.py --model-dir=models/mydatasets --batch-size=8 --workers=2 --epochs=30 data/mydatasets**
 ## Exporting to onnx
-> **$python3 onnx_export.py --model-dir=models/mydatasets**
+> **$ python3 onnx_export.py --model-dir=models/mydatasets**
 ## Run on live camera
-> **$imagenet.py --model=models/mydatasets/resnet18.onnx --labels=data/mydatasets/mylabels.txt --input_blob=input_0 output_blob=output_0 /dev/video0**
+
+* MIPI CSI cameras (csi://0)
+* V4L2 cameras (/dev/video0)
+* RTP/RTSP streams (rtsp://username:password@ip:port)
+
+> **$ imagenet.py --model=models/mydatasets/resnet18.onnx --labels=data/mydatasets/mylabels.txt --input_blob=input_0 output_blob=output_0 /dev/video0**
